@@ -6,7 +6,7 @@ require_relative 'orchestrator'
 #     Params: tenant, username, password, [orchestrator url]     #
 #________________________________________________________________#
 
-orch = Orchestrator.new("dean", "admin", "123qwe123")
+orch = Orchestrator.new("playground", "admin", "123qwe123")
 
 #________________________________________________________________#
 #                          SEND REQUEST                          #
