@@ -7,6 +7,7 @@ To use:
 1. Select whichever language makes your eyes twinkle
 2. Insert the *orchestrator* file into your pwd
 3. Mimic the sample calls made in the *test* file
+(No need to authenticate. This happens automatically)
 ***
 
 ## Ruby
