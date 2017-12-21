@@ -19,8 +19,8 @@ puts res["body"]["value"]
 
 # POST
 res = orch.request('post', 'odata/Assets', {Name: "Asset" + Random.rand(99999).to_s,
-											ValueScope: "Global",
-											ValueType: "Text",
-											Value: "Et tu asset 2",
-  											StringValue: "Et tu asset 2"})
+					    ValueScope: "Global",
+					    ValueType: "Text",
+					    Value: "Et tu asset 2",
+  					    StringValue: "Et tu asset 2"})
 puts res["body"]
