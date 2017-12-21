@@ -11,4 +11,25 @@ To use:
 
 ## Ruby
 
++ Connect to Orchestrator
+```ruby
+require_relative 'orchestrator'
+
+orch = Orchestrator.new("tenant", "user", "password")
+```
+
++ Make Calls
+```ruby
+# GET
+response = orch.request('get', 'odata/Environments')
+puts response["body"]["value"]
+
+# POST
+response = orch.request('post', 'odata/Assets', {Name: "Asset" + Random.rand(99999).to_s,
+                                                 ValueScope: "Global",
+                                                 ValueType: "Text",
+                                                 Value: "Et tu asset 2",
+                                                 StringValue: "Et tu asset 2"})
+puts response["body"]
+```
 ## Javascript
