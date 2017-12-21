@@ -22,8 +22,8 @@ class Orchestrator
 
 
   def request(type, extension, body = nil)
-  	# Form URI
-  	uri = URI(@url + extension)
+    # Form URI
+    uri = URI(@url + extension)
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
 
@@ -33,7 +33,7 @@ class Orchestrator
     params << {'Content-Type' =>'application/json', 
                'Authorization' => 'Bearer ' + (@token || '')}
   	
-  	# Send Request
+    # Send Request
     res = http.send(type, *params)
     return {'code' => res.code, 'message' => res.message, 'class' => res.class.name, 'body' => JSON.parse(res.body)}
 
