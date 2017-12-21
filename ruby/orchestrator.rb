@@ -5,8 +5,8 @@ require 'json'
 class Orchestrator  
 
   def initialize(tenant, user, pass, url = 'https://platform.uipath.com/') 
-    @url = url
-    @token = getToken(tenant, user, pass)
+  	@url = url
+  	@token = getToken(tenant, user, pass)
   end
 
 
