@@ -11,14 +11,14 @@ To use:
 
 ## Ruby
 
-+ Connect to Orchestrator
+#### Connect to Orchestrator
 ```ruby
 require_relative 'orchestrator'
 
 orch = Orchestrator.new("tenant", "user", "password")
 ```
 
-+ Make Calls
+#### Make Calls
 ```ruby
 # GET
 response = orch.request('get', 'odata/Environments')
@@ -34,14 +34,14 @@ puts response["body"]
 ```
 ## Javascript
 
-+ Connect to Orchestrator
+#### Connect to Orchestrator
 ```javascript
 require('./orchestrator.js');
 
 var orch = new Orchestrator("tenant", "username", "password");
 ```
 
-+ Make Calls
+#### Make Calls
 ```javascript
 // GET
 orch.request({ type: "GET", 
