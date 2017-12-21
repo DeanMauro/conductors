@@ -16,15 +16,15 @@ var orch = new Orchestrator("tenant", "username", "password");
 
 // GET (Get assets)
 orch.request({ type: "GET", 
-			   extension: 'odata/Assets',
-			   callback: printResult });
+	       extension: 'odata/Assets',
+	       callback: printResult });
 
 // POST (Create new queue)
 let body = JSON.stringify({Name: Math.random().toString(36).substring(2, 15), MaxNumberOfRetries: 2});
-orch.request({ type: "POST", 
-			   extension: 'odata/QueueDefinitions',
-			   body: body,
-			   callback: printResult });
+orch.request({ type: "POST",
+	       extension: 'odata/QueueDefinitions',
+	       body: body,
+	       callback: printResult });
 
 /*________________________________________________________________*/
 /*                           GET RESPONSE                         */
