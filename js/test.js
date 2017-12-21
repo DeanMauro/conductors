@@ -7,7 +7,7 @@ require('./orchestrator.js');
 /*              Params: tenant, username, password, [url]         */
 /*________________________________________________________________*/
 
-var orch = new Orchestrator("dean", "admin", "123qwe123");
+var orch = new Orchestrator("playground", "admin", "123qwe123");
 
 /*________________________________________________________________*/
 /*                           SEND REQUEST                         */
