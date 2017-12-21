@@ -25,7 +25,7 @@ response = orch.request('get', 'odata/Environments')
 puts response["body"]["value"]
 
 # POST
-response = orch.request('post', 'odata/Assets', {Name: "Asset" + Random.rand(99999).to_s,
+response = orch.request('post', 'odata/Assets', {Name: "Dean",
                                                  ValueScope: "Global",
                                                  ValueType: "Text",
                                                  Value: "Et tu asset 2",
@@ -33,3 +33,29 @@ response = orch.request('post', 'odata/Assets', {Name: "Asset" + Random.rand(999
 puts response["body"]
 ```
 ## Javascript
+
++ Connect to Orchestrator
+```javascript
+require('./orchestrator.js');
+
+var orch = new Orchestrator("tenant", "username", "password");
+```
+
++ Make Calls
+```javascript
+// GET
+orch.request({ type: "GET", 
+               extension: 'odata/Environments',
+               callback: printResult });
+
+// POST
+orch.request({ type: "POST", 
+               extension: 'odata/Assets',
+               body: JSON.stringify({ Name: "Dean", ValueScope: "Global" }),
+               callback: printResult });
+
+// Callback
+function printResult(response) {
+	console.log(response);
+}
+```
