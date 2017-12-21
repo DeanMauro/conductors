@@ -13,8 +13,8 @@ class Orchestrator
 
   def getToken(tenant, user, pass)
   	res = request('post', 'api/account/authenticate', tenancyName: tenant,
-						          					  usernameOrEmailAddress: user, 
-						          					  password: pass)
+		                                          usernameOrEmailAddress: user, 
+		                                          password: pass)
 
   	res['message'] == 'OK' ? (res['body']['result'] || res['body']['Result']) : (raise "Couldn't Authorize. Check credentials and try again.")
   end
@@ -29,7 +29,7 @@ class Orchestrator
 
     # Cover Possible Params
     params = [uri]
-   	params << body.to_json unless body.nil?
+    params << body.to_json unless body.nil?
     params << {'Content-Type' =>'application/json', 
                'Authorization' => 'Bearer ' + (@token || '')}
   	
