@@ -12,8 +12,8 @@ class Orchestrator {
   getToken(tenant, user, pass) {
   	let body = JSON.stringify({tenancyName: tenant, usernameOrEmailAddress: user, password: pass});
   	return this.request({ type: "POST", 
-  						  extension: 'api/account/authenticate', 
-  						  body: body });
+			      extension: 'api/account/authenticate', 
+			      body: body });
   }
 
 
@@ -27,14 +27,14 @@ class Orchestrator {
 	        if (this.readyState == this.DONE && this.status < 300) {
 	        	let result = JSON.parse(this.responseText);
 	        	p["callback"](result);
-			}
+		}
 	    };
 	}
 
-	// Compose request
+    // Compose request
     xhttp.open(p["type"].toUpperCase(), this.url + p["extension"], !!Orchestrator.token);
     xhttp.setRequestHeader('Content-Type', 'application/json');
-  	xhttp.setRequestHeader('Authorization', 'Bearer ' + (Orchestrator.token || ''));
+    xhttp.setRequestHeader('Authorization', 'Bearer ' + (Orchestrator.token || ''));
     xhttp.send(p["body"]);
 
     // Authentication is synchronous, so just return the token.
