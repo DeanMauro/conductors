@@ -20,7 +20,7 @@ print(res)
 
 # POST
 res = orch.request('post', 'odata/Assets', {'Name': "Asset " + str(uuid.uuid4())[0:8],
-											'ValueScope': "Global",
-											'ValueType': "Text",
-  											'StringValue': "Et tu asset 2"})
+					    'ValueScope': "Global",
+					    'ValueType': "Text",
+  					    'StringValue': "Et tu asset 2"})
 print(res)
