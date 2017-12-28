@@ -14,14 +14,13 @@ orch = Orchestrator("tenant", "username", "password")
 #          Params: request type, url extension, [data]           #
 #________________________________________________________________#
 
-"""GET"""
+# GET
 res = orch.request('get', 'odata/Environments')
 print(res)
 
-"""POST"""
+# POST
 res = orch.request('post', 'odata/Assets', {'Name': "Asset " + str(uuid.uuid4())[0:8],
 											'ValueScope': "Global",
 											'ValueType': "Text",
-											'Value': "Et tu asset 2",
   											'StringValue': "Et tu asset 2"})
 print(res)
