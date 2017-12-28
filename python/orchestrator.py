@@ -10,8 +10,8 @@ class Orchestrator:
 
 	def __getToken(cls, tenant, user, password):
 		res = cls.request('POST', 'api/account/authenticate', {'tenancyName': tenant,
-						                                   	   'usernameOrEmailAddress': user, 
-						                                   	   'password': password})
+                                                                       'usernameOrEmailAddress': user, 
+                                                                       'password': password})
 		return res["result"]
 
 
