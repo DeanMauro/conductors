@@ -13,6 +13,34 @@ To use:
 ***
 
 
+<h2 align="center">Java + GSON</h2>
+
+#### Connect to Orchestrator
+```java
+Orchestrator orch = new Orchestrator("tenant", "user", "password");
+```
+
+#### Make Calls
+```java
+Map res;
+			
+// GET
+res = orch.request("get", "odata/Environments", null);
+System.out.println(res);
+						
+// PUT
+JsonObject body = new JsonObject();
+	   body.addProperty("Name", "Caesar");
+	   body.addProperty("ValueScope", "Global");
+	   body.addProperty("ValueType", "Text");
+	   body.addProperty("StringValue", "Et tu asset 2");
+res = orch.request("post", "odata/Assets", body.toString());
+System.out.println(res);
+
+/*See Test file for imports and error handling*/
+```
+
+
 <h2 align="center">Javascript</h2>
 
 #### Connect to Orchestrator
