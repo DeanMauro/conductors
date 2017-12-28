@@ -1,4 +1,6 @@
+
 # Conductors
+
 So. You have an Orchestrator but you're one of those tech weirdies who doesn't like UIs. Maybe you're an exclusively backdoor kinda person whose chin drips with drool at the sight of a shapely API. I don't know--that's between you and your shrink. But while you figure all that out, I'll be writing up wrappers and examples to help you get off
 
 the ground with the Orchestrator API. Try to contain your excitement.
@@ -10,7 +12,8 @@ To use:
 (No need to authenticate. This happens automatically)
 ***
 
-## Javascript
+
+<h2 align="center">Javascript</h2>
 
 #### Connect to Orchestrator
 ```javascript
@@ -38,7 +41,8 @@ function printResult(response) {
 }
 ```
 
-## Python
+
+<h2 align="center">Python</h2>
 
 #### Connect to Orchestrator
 ```python
@@ -61,7 +65,8 @@ res = orch.request('post', 'odata/Assets', {'Name': "Caesar",
 print(res)
 ```
 
-## Ruby
+
+<h2 align="center">Ruby</h2>
 
 #### Connect to Orchestrator
 ```ruby
@@ -84,4 +89,3 @@ response = orch.request('post', 'odata/Assets', {Name: "Caesar",
                                                  StringValue: "Et tu asset 2"})
 puts response["body"]
 ```
-
