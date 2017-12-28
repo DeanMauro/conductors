@@ -10,29 +10,6 @@ To use:
 (No need to authenticate. This happens automatically)
 ***
 
-## Ruby
-
-#### Connect to Orchestrator
-```ruby
-require_relative 'orchestrator'
-
-orch = Orchestrator.new("tenant", "user", "password")
-```
-
-#### Make Calls
-```ruby
-# GET
-response = orch.request('get', 'odata/Environments')
-puts response["body"]["value"]
-
-# POST
-response = orch.request('post', 'odata/Assets', {Name: "Dean",
-                                                 ValueScope: "Global",
-                                                 ValueType: "Text",
-                                                 Value: "Et tu asset 2",
-                                                 StringValue: "Et tu asset 2"})
-puts response["body"]
-```
 ## Javascript
 
 #### Connect to Orchestrator
@@ -52,7 +29,7 @@ orch.request({ type: "GET",
 // POST
 orch.request({ type: "POST", 
                extension: 'odata/Assets',
-               body: JSON.stringify({ Name: "Dean", ValueScope: "Global" }),
+               body: JSON.stringify({ Name: "Caesar", ValueScope: "Global" }),
                callback: printResult });
 
 // Callback
@@ -60,3 +37,51 @@ function printResult(response) {
 	console.log(response);
 }
 ```
+
+## Python
+
+#### Connect to Orchestrator
+```python
+from orchestrator import Orchestrator
+
+orch = Orchestrator("tenant", "username", "password")
+```
+
+#### Make Calls
+```python
+# GET
+res = orch.request('get', 'odata/Environments')
+print(res)
+
+# POST
+res = orch.request('post', 'odata/Assets', {'Name': "Caesar",
+					    'ValueScope': "Global",
+					    'ValueType': "Text",
+  					    'StringValue': "Et tu asset 2"})
+print(res)
+```
+
+## Ruby
+
+#### Connect to Orchestrator
+```ruby
+require_relative 'orchestrator'
+
+orch = Orchestrator.new("tenant", "user", "password")
+```
+
+#### Make Calls
+```ruby
+# GET
+response = orch.request('get', 'odata/Environments')
+puts response["body"]["value"]
+
+# POST
+response = orch.request('post', 'odata/Assets', {Name: "Caesar",
+                                                 ValueScope: "Global",
+                                                 ValueType: "Text",
+                                                 Value: "Et tu asset 2",
+                                                 StringValue: "Et tu asset 2"})
+puts response["body"]
+```
+
