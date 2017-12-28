@@ -17,7 +17,7 @@ public class Test {
 			/*________________________________________________________________*/
 			
 			
-			Orchestrator orch = new Orchestrator("dean", "admin", "123qwe123");
+			Orchestrator orch = new Orchestrator("tenant", "user", "password");
 			
 			
 			/*________________________________________________________________*/
@@ -35,10 +35,10 @@ public class Test {
 			
 			// PUT
 			JsonObject body = new JsonObject();
-					   body.addProperty("Name", "Asset "+UUID.randomUUID().toString().substring(0,8));
-					   body.addProperty("ValueScope", "Global");
-					   body.addProperty("ValueType", "Text");
-					   body.addProperty("StringValue", "Et tu asset 2");
+				   body.addProperty("Name", "Asset "+UUID.randomUUID().toString().substring(0,8));
+				   body.addProperty("ValueScope", "Global");
+				   body.addProperty("ValueType", "Text");
+				   body.addProperty("StringValue", "Et tu asset 2");
 			res = orch.request("post", "odata/Assets", body.toString());
 			System.out.println(res);
 			
