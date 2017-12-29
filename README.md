@@ -1,7 +1,7 @@
 
 # Conductors
 
-So. You have an Orchestrator but you're one of those tech weirdies who doesn't like UIs. Maybe you're an exclusively backdoor kinda person whose chin drips with drool at the sight of a shapely API. I don't know--that's between you and your shrink. But while you figure all that out, I'll be writing up wrappers and examples to help you get off
+So. You have an Orchestrator but you're one of those tech weirdies who doesn't like UIs. Maybe you're an exclusively backdoor kinda person whose chin drips with drool at the sight of a shapely API. That's between you and your shrink. But while you figure it all out, here are some wrappers and examples to help you get off
 
 the ground with the Orchestrator API. Try to contain your excitement.
 
