@@ -28,7 +28,7 @@ Map res;
 res = orch.request("get", "odata/Environments", null);
 System.out.println(res);
 						
-// PUT
+// POST
 JsonObject body = new JsonObject();
 	   body.addProperty("Name", "Caesar");
 	   body.addProperty("ValueScope", "Global");
