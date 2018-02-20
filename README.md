@@ -117,3 +117,8 @@ response = orch.request('post', 'odata/Assets', {Name: "Caesar",
                                                  StringValue: "Et tu asset 2"})
 puts response["body"]
 ```
+
+
+
+<h2 align="center">:rocket: Postman :rocket:</h2>
+As a bonus, here's a Postman collection that automatically authenticates calls and refreshes the token before it expires. To use, go to Import>Import from link and add https://www.getpostman.com/collections/21ccbf63948df8ae7a84
