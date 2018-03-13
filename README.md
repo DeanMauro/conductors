@@ -121,8 +121,9 @@ puts response["body"]
 
 
 <h2 align="center">:rocket: Postman :rocket:</h2>
-As a bonus, here's a Postman collection that automatically authenticates calls and refreshes the token before it expires. 
+As a bonus, here's a Postman collection that automatically authenticates calls and refreshes the token before it expires.
+
 To use:
 
 1. Go to Import>Import from link and add https://www.getpostman.com/collections/21ccbf63948df8ae7a84
-2. Create a new Environment with the following variables: `url`, `tenancyName`, `usernameOrEmailAddress`, and `password`, matching each to your Orchestrator credentials.
+2. Create a new Environment with the following variables: `url`, `tenancyName`, `usernameOrEmailAddress`, and `password`, matching each to your Orchestrator credentials. Your calls will now be authenticated automatically.
