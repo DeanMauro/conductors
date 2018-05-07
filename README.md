@@ -45,7 +45,7 @@ System.out.println(res);
 
 #### Connect to Orchestrator
 ```javascript
-require('./orchestrator.js');
+const Orchestrator = require('./orchestrator.js');
 
 var orch = new Orchestrator("tenant", "username", "password");
 ```
