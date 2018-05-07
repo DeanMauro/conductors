@@ -1,5 +1,5 @@
 'use strict';
-require('./orchestrator.js');
+const Orchestrator = require('./orchestrator.js');
 
 /*________________________________________________________________*/
 /*                    CREATE ORCHESTRATOR OBJECT                  */
