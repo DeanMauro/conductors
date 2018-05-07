@@ -46,4 +46,4 @@ class Orchestrator {
 
 }
 
-global.Orchestrator = Orchestrator;
+module.exports = Orchestrator;
