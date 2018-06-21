@@ -126,6 +126,6 @@ As a bonus, here's a Postman collection that automatically authenticates calls a
 To use:
 
 1. Go to **Import>Import from link** and add https://www.getpostman.com/collections/21ccbf63948df8ae7a84
-2. Create a new Environment<sup>[1](#myfootnote1)</sup> with the following variables: `url`, `tenancyName`, `usernameOrEmailAddress`, and `password`, matching each to your Orchestrator credentials. Your calls will now be authenticated automatically.
+2. Create a new Environment<sup>[1](#envfile)</sup> with the following variables: `url`, `tenancyName`, `usernameOrEmailAddress`, and `password`, matching each to your Orchestrator credentials. Your calls will now be authenticated automatically.
 
-<a name="myfootnote1"><sup>1</sup></a>: Or import [this environment file](UiPathENV.postman_environment) instead and update the variables.
+<a name="envfile"><sup>1</sup></a>: Or import [this environment file](UiPathENV.postman_environment) instead and update the variables.
